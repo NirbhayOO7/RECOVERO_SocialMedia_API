@@ -23,8 +23,7 @@ const userSchema = new mongoose.Schema({
 
 //pre is a mongoose middleware which calls the callback function before changing/updating a document in user collection.
 userSchema.pre("save", function(next){
-  const user = this;  //this will hold the current instance of userSchema
-
+  const user = this;
   if(this.isModified("password") || this.isNew){
       bcrypt.genSalt(10, function(saltError, salt){
           if(saltError){

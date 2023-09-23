@@ -2,7 +2,7 @@ const User = require('../models/user');
 const jwt = require('jsonwebtoken');
 const env = require('../config/environment');
 
-// signup doctor
+// signup User
 module.exports.create = async function(req, res){
     try {
 
@@ -11,19 +11,22 @@ module.exports.create = async function(req, res){
         {
             return res.status(202).json({
                 message: 'Email id already exist!',
-                data: user
+                data: user,
+                success: false
             })
         }
         else{
             if(req.body.password != req.body.confirmPassword)
             {
                 return res.status(422).json({
-                    message: "Password and Confirm Password does not match!"
+                    message: "Password and Confirm Password does not match!",
+                    success: false
                 })
             }
             user = await User.create(req.body);
             return res.status(200).json({
                 message: "User id created, and your password in stored in encrypted format",
+                success: true,
                 data: user
             });
         }
@@ -31,12 +34,13 @@ module.exports.create = async function(req, res){
     } catch (error) {
         console.log('Error creating User account', error);
         return res.status(500).json({
+            success: false,
             message: "Interval server error"
         });
     }
 }
 
-// login doctor using email and password by using jwt 
+// login User using email and password by using jwt 
 module.exports.createSession = async function(req, res){
     try {
         let user = await User.findOne({email: req.body.email});
@@ -46,6 +50,7 @@ module.exports.createSession = async function(req, res){
                 if(isMatch)
                 {
                     return res.status(200).json({
+                        success: true,
                         message: "Sign in successful, here is your token, please keep it safe!",
                         data: {
                             token : jwt.sign(user.toJSON(), env.secretKey , {expiresIn: '1000000'})
@@ -55,12 +60,14 @@ module.exports.createSession = async function(req, res){
                 else if(!isMatch)
                 {
                     return res.status(422).json({
+                        success: false,
                         message: "Invalid username or password",
                     });
                 }
                 else{
                     console.log("Error comparing password", err);
                     return res.status(500).json({
+                        success: false,
                         message: "Internal server error"
                     });
                 }
@@ -69,12 +76,14 @@ module.exports.createSession = async function(req, res){
         else
         {
             return res.status(422).json({
+                success: false,
                 message: "Invalid username or password"
             });
         }        
     } catch (error) {
         console.log('Error while loging in user', error);
         return res.status(500).json({
+            success: false,
             message:"Internal Server Error"
         })
     }

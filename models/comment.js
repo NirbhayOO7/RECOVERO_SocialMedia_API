@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 //comment database schema.
 const commentSchema = new mongoose.Schema({
-    comment :{
+    content :{
         type: String,
         required: true
     },
@@ -21,7 +21,7 @@ const commentSchema = new mongoose.Schema({
         }
     ]
 },{
-    timestamps
+    timestamps: true
 });
 
 const Comment = mongoose.model('Comment', commentSchema);
