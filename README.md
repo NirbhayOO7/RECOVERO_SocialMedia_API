@@ -39,10 +39,10 @@ npm start
 
 The server should now be running on http://localhost:8000.
 
-### Usage
+### 2.  Usage
 This backend provides the necessary APIs for the social media messaging app. You can integrate it with the frontend or test the APIs using tools like Postman or curl.
 
-### API Endpoints
+### 3.  API Endpoints
 Here are the main API endpoints provided by this backend:
 
 POST /user/register: Register a new user.
@@ -50,10 +50,6 @@ POST /user/register: Register a new user.
 
 POST /user/login: Authenticate and log in a user.
 ![Login User](./assets/Images/Login%20user.png)
-
-GET /user/profile: Get the user's profile information.
-
-PUT /user/profile: Update the user's profile.
 
 POST /post/create: create new post only when user is logged in
 ![Create Post](./assets/Images/Create%20post.png)
@@ -71,16 +67,16 @@ Get /like/toggle: toggle to like or dislike a post/comment only when user is log
 ![Toggle Like](./assets/Images/Toggle%20Like.png)
 
 
-Database
+### 4. Database
 This backend uses MongoDB as its database. You can set up a local MongoDB instance or use a cloud-based solution like MongoDB Atlas.
 
-Authentication
+### 5.  Authentication
 User authentication is implemented using JSON Web Tokens (JWT). Make sure to keep your JWT secret key secure.
 
-Contributing
+### 6.  Contributing
 Contributions are welcome! If you'd like to contribute to this project, please follow our contribution guidelines.
 
-License
+7. License
 This project is licensed under the MIT License.
 
 
