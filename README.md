@@ -13,7 +13,7 @@ This is the backend component of our Social Media Messaging App(SocialCode) buil
 6. Contributing
 7. License
 
-### Installation
+### 1. Installation
 
 To get started with the development or deployment of this backend, follow these steps:
 
