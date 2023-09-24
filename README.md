@@ -76,7 +76,7 @@ User authentication is implemented using JSON Web Tokens (JWT). Make sure to kee
 ### 6.  Contributing
 Contributions are welcome! If you'd like to contribute to this project, please follow our contribution guidelines.
 
-7. License
+### 7. License
 This project is licensed under the MIT License.
 
 
