@@ -12,9 +12,10 @@ app.use(bodyParser.urlencoded({extended: false}));
 // initialize passport in our express app. 
 app.use(passport.initialize());
 
-
+// use routes for any request made on /
 app.use('/', require('./routes'));
 
+// enabling server to listen over port 8000
 app.listen(port, function(err){
     if(err)
     {

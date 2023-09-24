@@ -2,6 +2,7 @@ const Post = require('../models/post');
 const Comment = require('../models/comment');
 const Like = require('../models/like');
 
+// create new post only when user is logged in
 module.exports.create = async (req, res)=>{
     try {
         let post = await Post.create({
