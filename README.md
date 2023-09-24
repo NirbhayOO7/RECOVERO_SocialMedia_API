@@ -20,21 +20,20 @@ To get started with the development or deployment of this backend, follow these 
 Clone the repository:
 git clone https://github.com/NirbhayOO7/RECOVERO_SocialMedia_API
 
-Install dependencies:
-cd social-media-backend
-npm install
+Install dependencies:<br>
+cd social-media-backend  <br>
+npm install  <br>
 
 
-Configure environment variables:
-Create an environment.js file in the config directory with the following environment variables:
-
-PORT=8000
-DATABASE_URI=mongodb://localhost:27017/social_media_db
-JWT_SECRET=your_secret_key
+Configure environment variables:  <br>
+Create an environment.js file in the config directory with the following environment variables:  <br>
+PORT=8000  <br>
+DATABASE_URI=mongodb://localhost:27017/social_media_db  <br>
+JWT_SECRET=your_secret_key  <br>
 
 Replace your_secret_key with your actual secret key for JWT authentication.
 
-Start the server:
+Start the server:<br>
 npm start
 
 The server should now be running on http://localhost:8000.
