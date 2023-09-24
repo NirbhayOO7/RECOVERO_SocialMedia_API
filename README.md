@@ -18,7 +18,7 @@ This is the backend component of our Social Media Messaging App(SocialCode) buil
 To get started with the development or deployment of this backend, follow these steps:
 
 Clone the repository:
-git clone https://github.com/yourusername/social-media-backend.git
+git clone https://github.com/NirbhayOO7/RECOVERO_SocialMedia_API
 
 Install dependencies:
 cd social-media-backend
