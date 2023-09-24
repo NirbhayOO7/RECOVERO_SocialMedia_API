@@ -8,7 +8,7 @@ module.exports.create = async (req, res)=>{
     try {
         const post = await Post.findById(req.body.post);
         if(post){
-            // console.log('inside post comment+++++++++++++++');
+
             let comment = await Comment.create({
                 ...req.body,
                 user: req.user._id
