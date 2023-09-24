@@ -5,13 +5,13 @@
 This is the backend component of our Social Media Messaging App(SocialCode) built with Node.js. It provides the server-side logic and APIs for our application.
 
 ## Table of Contents
-Installation
-Usage
-API Endpoints
-Database
-Authentication
-Contributing
-License
+1. Installation
+2. Usage
+3. API Endpoints
+4. Database
+5. Authentication
+6. Contributing
+7. License
 
 ### Installation
 
